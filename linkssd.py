@@ -7,6 +7,7 @@ import sys
 try:
     from ntfsutils.junction import isjunction
     from ntfsutils.junction import create as createjunction
+    from ntfsutils.junction import unlink as unlinkjunction
     _junction_data = {}
 except ImportError:
     _junction_data = {}
@@ -19,6 +20,11 @@ except ImportError:
         if junction in _junction_data:
             raise Exception("%s: junction link name already exists" % junction)
         _junction_data[junction] = directory
+
+    def unlinkjunction(path):
+    if not isjunction(path):
+            raise Exception("%s does not exist or is not a junction" % path)
+        _junction_data[path]
 
     def walk(base):
         yield [base, ['dir1','dir2','dir3'], None]
@@ -89,6 +95,13 @@ junction_data[home + r"\AppData\Roaming\RetroShare" + "\\" + dc + r"\Partials"] 
 
 for junction in junction_data.keys():
     directory = junction_data[junction]
+    try:
+        unlinkjunction(junction)
+    except Exception as e:
+        if str(e).strip().endswith(' does not exist or is not a junction'):
+            pass
+        else:
+            raise e
     try:
         createjunction(directory, junction)
     except Exception as e:
