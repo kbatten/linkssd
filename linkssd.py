@@ -22,7 +22,7 @@ except ImportError:
         _junction_data[junction] = directory
 
     def unlinkjunction(path):
-    if not isjunction(path):
+        if not isjunction(path):
             raise Exception("%s does not exist or is not a junction" % path)
         _junction_data[path]
 
@@ -69,6 +69,13 @@ junction_data[home + r"\Music\iTunes"] = r"E:\SSD\iTunes_music"
 
 # Link spinning disk apple mobile backup
 junction_data[home + r"\AppData\Roaming\Apple Computer\MobileSync\Backup"] = r"E:\SSD\Apple_mobile_backup"
+
+# Link AppData\Roaming
+for drive in ['D', 'E']:
+    for d in list_directories(drive + r":\SSD\Roaming"):
+        directory = drive + r":\SSD\Roaming" + "\\" + d
+        junction = home + r"\AppData\Roaming" + "\\" + d
+        junction_data[junction] = directory
 
 # Link Origin Games
 for drive in ['D', 'E']:
