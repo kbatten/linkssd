@@ -97,6 +97,13 @@ with open(home + r"\AppData\Roaming\RetroShare" + "\\default_cert.txt") as f:
 junction_data[home + r"\AppData\Roaming\RetroShare" + "\\" + dc + r"\Downloads"] = r"E:\SSD\Retroshare\Downloads"
 junction_data[home + r"\AppData\Roaming\RetroShare" + "\\" + dc + r"\Partials"] = r"E:\SSD\Retroshare\Partials"
 
+# Link Sandboxed Apps
+for drive in ['D', 'E']:
+    for d in list_directories(drive + r":\SSD\Sandboxed Apps"):
+        directory = drive + r":\SSD\Sandboxed Apps" + "\\" + d
+        junction = r"C:\Sandboxed Apps" + "\\" + d
+        junction_data[junction] = directory
+
 
 #######################
 
