@@ -91,19 +91,12 @@ for drive in ['D', 'E']:
         junction = r"C:\Program Files (x86)" + "\\" + d
         junction_data[junction] = directory
 
-# Link Retroshare Downloads and Partials
-with open(home + r"\AppData\Roaming\RetroShare" + "\\default_cert.txt") as f:
-    dc = f.read().strip()
-junction_data[home + r"\AppData\Roaming\RetroShare" + "\\" + dc + r"\Downloads"] = r"E:\SSD\Retroshare\Downloads"
-junction_data[home + r"\AppData\Roaming\RetroShare" + "\\" + dc + r"\Partials"] = r"E:\SSD\Retroshare\Partials"
-
-# Link Sandboxed Apps
+# Link Program Files
 for drive in ['D', 'E']:
-    for d in list_directories(drive + r":\SSD\Sandboxed Apps"):
-        directory = drive + r":\SSD\Sandboxed Apps" + "\\" + d
-        junction = r"C:\Sandboxed Apps" + "\\" + d
+    for d in list_directories(drive + r":\SSD\Program Files"):
+        directory = drive + r":\SSD\Program Files" + "\\" + d
+        junction = r"C:\Program Files" + "\\" + d
         junction_data[junction] = directory
-
 
 #######################
 
