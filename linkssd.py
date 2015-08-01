@@ -48,7 +48,7 @@ def main():
                         r"C:\Program Files (x86)\Steam\steamapps\common")
     create_junction_all(r":\SSD\Steam\steamapps\sourcemods",
                         r"C:\Program Files (x86)\Steam\steamapps\sourcemods")
-    create_junction(r"E:\SSD\torrents", home + r"\Downloads\torrents")
+    #create_junction(r"E:\SSD\torrents", home + r"\Downloads\torrents")
     #create_junction(r"E:\SSD\iTunes_music", home + r"\Music\iTunes")
     #create_junction(r"E:\SSD\Apple_mobile_backup", home + r"\AppData\Roaming\Apple Computer\MobileSync\Backup")
     create_junction_all(r":\SSD\Roaming", home + r"\AppData\Roaming")
