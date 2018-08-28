@@ -33,6 +33,10 @@ def create_junction(directory, junction):
             raise e
 
 def create_junction_all(directory, junction):
+    """
+    create_junction_all(r":\SSD\Steam\steamapps\common",
+                        r"C:\Program Files (x86)\Steam\steamapps\common")
+    """
     for drive in drives:
         for d in list_directories(drive + directory):
             directory_fqn = drive + directory + "\\" + d
@@ -44,17 +48,16 @@ home = os.path.expanduser("~")
 
 
 def main():
+    create_junction_all(r":\SSD\Roaming", home + r"\AppData\Roaming")
+
+    create_junction_all(r":\SSD\Program Files (x86)", r"C:\Program Files (x86)")
+    create_junction_all(r":\SSD\Program Files", r"C:\Program Files")
+
     create_junction_all(r":\SSD\Steam\steamapps\common",
                         r"C:\Program Files (x86)\Steam\steamapps\common")
     create_junction_all(r":\SSD\Steam\steamapps\sourcemods",
                         r"C:\Program Files (x86)\Steam\steamapps\sourcemods")
-    #create_junction(r"E:\SSD\torrents", home + r"\Downloads\torrents")
-    #create_junction(r"E:\SSD\iTunes_music", home + r"\Music\iTunes")
-    #create_junction(r"E:\SSD\Apple_mobile_backup", home + r"\AppData\Roaming\Apple Computer\MobileSync\Backup")
-    create_junction_all(r":\SSD\Roaming", home + r"\AppData\Roaming")
     create_junction_all(r":\SSD\Origin Games", r"C:\Program Files (x86)\Origin Games")
-    create_junction_all(r":\SSD\Program Files (x86)", r"C:\Program Files (x86)")
-    create_junction_all(r":\SSD\Program Files", r"C:\Program Files")
 
 
 if __name__ == "__main__":
