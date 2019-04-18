@@ -77,11 +77,11 @@ def main():
                         r"C:\Program Files")
 
     create_junction_all(DRIVES,
-                        r"\SSD\Steam\steamapps\common",
+                        r"\SSD\Steam\common",
                         r"C:\Program Files (x86)\Steam\steamapps\common")
 
     create_junction_all(DRIVES,
-                        r"\SSD\Steam\steamapps\sourcemods",
+                        r"\SSD\Steam\sourcemods",
                         r"C:\Program Files (x86)\Steam\steamapps\sourcemods")
 
     create_junction_all(DRIVES,
