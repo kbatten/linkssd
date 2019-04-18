@@ -88,6 +88,10 @@ def main():
                         r"\SSD\Origin Games",
                         r"C:\Program Files (x86)\Origin Games")
 
+    create_junction_all(DRIVES,
+                        r"\SSD\Ubisoft\games",
+                        r"C:\Program Files (x86)\Ubisoft\Ubisoft Game Launcher\games")
+
 
 if __name__ == "__main__":
     main()
