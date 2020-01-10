@@ -92,6 +92,9 @@ def main():
                         r"\SSD\Ubisoft\games",
                         r"C:\Program Files (x86)\Ubisoft\Ubisoft Game Launcher\games")
 
+    create_junction(r"E:\SSD\Steam\downloading",
+                    r"C:\Program Files (x86)\Steam\steamapps\downloading")
+
 
 if __name__ == "__main__":
     main()
