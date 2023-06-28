@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from __future__ import absolute_import
 from __future__ import division
@@ -19,7 +19,7 @@ def list_directories(base):
 
     """
     try:
-        directories = os.walk(base).next()[1]
+        directories = next(os.walk(base))[1]
     except StopIteration:
         directories = []
     return directories
@@ -31,6 +31,9 @@ def create_junction(src, dst):
     >>> create_junction(r"D:\SSD\Games\Zork", r"C:\Games\Zork")
 
     """
+    if not os.path.exists(src):
+        return
+
     try:
         ntfsutils.junction.unlink(dst)
     except Exception as e:
