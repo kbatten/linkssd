@@ -95,6 +95,10 @@ def main():
                         r"\SSD\Ubisoft\games",
                         r"C:\Program Files (x86)\Ubisoft\Ubisoft Game Launcher\games")
 
+    create_junction_all(DRIVES,
+                        r"\SSD\apps",
+                        HOME + r"\apps")
+
     create_junction(r"E:\SSD\Steam\downloading",
                     r"C:\Program Files (x86)\Steam\steamapps\downloading")
 
