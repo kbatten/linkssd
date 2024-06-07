@@ -102,6 +102,9 @@ def main():
     create_junction(r"E:\SSD\Steam\downloading",
                     r"C:\Program Files (x86)\Steam\steamapps\downloading")
 
+    create_junction(r"E:\SSD\Vortex\downloads",
+                        HOME + r"\AppData\Roaming\Vortex\downloads")
+
 
 if __name__ == "__main__":
     main()
