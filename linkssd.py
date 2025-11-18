@@ -96,6 +96,10 @@ def main():
                         r"C:\Program Files (x86)\Ubisoft\Ubisoft Game Launcher\games")
 
     create_junction_all(DRIVES,
+                        r"\SSD\GOG Galaxy\Games",
+                        r"C:\Program Files (x86)\GOG Galaxy\Games")
+
+    create_junction_all(DRIVES,
                         r"\SSD\apps",
                         HOME + r"\apps")
 
