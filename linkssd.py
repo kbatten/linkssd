@@ -109,6 +109,10 @@ def main():
     create_junction(r"E:\SSD\Vortex\downloads",
                         HOME + r"\AppData\Roaming\Vortex\downloads")
 
+    create_junction_all(DRIVES,
+                        r"\SSD_Extra\Steam\common",
+                        r"E:\SteamLibrary\steamapps\common")
+
 
 if __name__ == "__main__":
     main()
