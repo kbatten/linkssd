@@ -103,10 +103,10 @@ def main():
                         r"\SSD\apps",
                         HOME + r"\apps")
 
-    create_junction(r"E:\SSD\Steam\downloading",
+    create_junction(r"G:\SSD\Steam\downloading",
                     r"C:\Program Files (x86)\Steam\steamapps\downloading")
 
-    create_junction(r"E:\SSD\Vortex\downloads",
+    create_junction(r"G:\SSD\Vortex\downloads",
                         HOME + r"\AppData\Roaming\Vortex\downloads")
 
     create_junction_all(DRIVES,
