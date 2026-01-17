@@ -64,7 +64,7 @@ def create_junction_all(drives, src, dst):
 
 
 def main():
-    DRIVES = ["D:", "E:", "F:", "G:"]
+    DRIVES = ["D:", "E:", "F:", "G:", "H:", "I:", "J:", "K:"]
     HOME = os.path.expanduser("~")
 
     create_junction_all(DRIVES,
