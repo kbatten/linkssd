@@ -72,6 +72,10 @@ def main():
                         HOME + r"\AppData\Roaming")
 
     create_junction_all(DRIVES,
+                        r"\SSD\Local",
+                        HOME + r"\AppData\Local")
+
+    create_junction_all(DRIVES,
                         r"\SSD\Program Files (x86)",
                         r"C:\Program Files (x86)")
 
