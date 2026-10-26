@@ -117,7 +117,8 @@ def main():
                         r"\SSD_Extra\Steam\common",
                         r"E:\SteamLibrary\steamapps\common")
 
-    create_junction(r"H:\SSD\.cache\huggingface\hub",
+    create_junction_all(DRIVES,
+                        r"\SSD\.cache\huggingface\hub",
                         HOME + r"\.cache\huggingface\hub")
 
     create_junction(r"H:\SSD\.ollama\models",
